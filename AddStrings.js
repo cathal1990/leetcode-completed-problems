@@ -1,4 +1,4 @@
-// Given to numbers as strings, return the sum of them without
+// Given two numbers as strings, return the sum of them without
 // using built in methods to directly convert the strings to numbers.
 
 
