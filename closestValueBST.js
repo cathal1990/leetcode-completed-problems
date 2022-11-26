@@ -10,8 +10,8 @@ function dfs(tree, target, diff) {
         diff.value = currentDiff;
     }
 
-    if (target < tree.value) DataTransfer(tree.left, target, diff);
-    else if (target > tree.value) DataTransfer(tree.right, target, diff);
+    if (target < tree.value) dfs(tree.left, target, diff);
+    else if (target > tree.value) dfs(tree.right, target, diff);
   }
 
   function findClosestValueInBst(tree, target) {
