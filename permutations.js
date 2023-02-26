@@ -1,15 +1,11 @@
-function getPermutations(array) {
+function getPermutations(array, perm = [], perms = []) {
     // Write your code here.
-    if (array.length === 1) {
-      return [array]
-    }
-    let perms = [];
+    if (!array.length && perm.length) perms.push(perm)
+    
     for (let i=0; i<array.length; i++) {
-      let subArray = [...array.slice(0,i), ...array.slice(i+1)];
-      let subPerm = getPermutations(subArray);
-      for (let j=0; j<subPerm.length; j++) {
-        perms.push([array[i], ...subPerm[j]])
-      }
+      let newArray = array.filter((x, idx) => idx !== i);
+      let newPerm = perm.concat(array[i]);
+      getPermutations(newArray, newPerm, perms)
     }
     return perms
   }
