@@ -1,4 +1,5 @@
 function riverSizes(matrix) {
+    debugger;
     let arr = [];
   
     for (let i=0; i<matrix.length; i++) {
@@ -20,3 +21,11 @@ function riverSizes(matrix) {
   
     return size
   }
+
+let arr = [
+    [1,1,0],
+    [0,1,0],
+    [0,1,0]
+]
+
+console.log(riverSizes(arr))
