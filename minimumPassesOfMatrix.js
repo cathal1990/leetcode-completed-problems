@@ -1,7 +1,7 @@
 function minimumPassesOfMatrix(matrix) {
     let passes = 0;
     let queue = [];
-
+debugger;
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[0].length; j++) {
             if (matrix[i][j] > 0) queue.push([i,j])
@@ -38,3 +38,11 @@ function dfs(i, j, matrix, queue) {
     queue.push([i,j])
     matrix[i][j] *= -1
 }
+
+const mat = [
+    [0, -1, -3, 2, 0],
+    [1, -2, -5, -1, -3],
+    [3, 0, 0, -4, -1]
+  ]
+
+  console.log(minimumPassesOfMatrix(mat))
