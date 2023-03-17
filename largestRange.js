@@ -1,8 +1,9 @@
 function largestRange(array) {
     let longest = Number.MIN_SAFE_INTEGER;
     let result = [];
-
+    
     array.sort((a,b) => a -b)
+    debugger;
 
     for (let i=0; i< array.length; i++) {
         let start = i;
@@ -17,3 +18,5 @@ function largestRange(array) {
     }
     return result
   }
+
+  console.log(largestRange([1, 11, 3, 0, 15, 5, 2, 4, 10, 7, 12, 6]))
